@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ardra's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://unpkg.com/lottie-web@5.12.0/build/player/lottie.min.js"></script>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body style="margin: 0;">
+
+  <!-- Navbar -->
+  <div class="header-bar mb-5">
+    <nav class="navbar navbar-expand-lg w-100" style="background-color: #3A3E4D;">
+      <a class="navbar-brand" href="#AboutMe" style="color: #E5D0CF;">Ardra Padmakumar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home" style="color: #E5D0CF;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#AboutMe" style="color: #E5D0CF;">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects" style="color: #E5D0CF;">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#connect" style="color: #E5D0CF;">Connect</a>
+          </li>
+          <li class="nav-item">
+            <a href="Resume.pdf" download class="btn btn-outline-light ms-3">
+              Download Resume
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- JSON Animation -->
+<section id="home">
+  <div id="intro-animation" style="width: 300px; height: 300px; margin: auto;"></div>
+
+    <script>
+    lottie.loadAnimation({
+      container: document.getElementById('intro-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'flowerRotate.json' 
+    });
+  </script>
+</section>
+  <!-- Intro Section -->
+   
+  <div class="body-here" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px;">
+
+    <div class="intro-section mt-5">
+      <h1 class="intro typewriter">
+        <span class="hello">Hey there, I'm</span> <span class="name">Ardra</span>
+      </h1>
+    </div>
+
+    <div class="intro-bio mt-3 mb-4">
+      <h5 class="text" style="max-width: 700px; line-height: 1.6;">
+        <span class="hello floating-text" style="color: #E5D0CF;">
+          Hi! I'm <span class="name" style="color: #bf998f;">Ardra.</span> I'm a part developer, part designer, and full-time code wizard.
+          I built this little corner of the internet using HTML, CSS, and JavaScript to share my tech journey with you.
+        </span>
+      </h5>
+        <a href="mailto:ardrapadmakumar@gmail.com" class="btn btn-shop mt-3 mb-4 ">Say Hi  ✉️ </a>
+
+    </div>
+   
+<section id="AboutMe">
+    <!-- About Me Section + Carousel Side-by-Side -->
+    <div class="my-profile-section d-flex justify-content-between align-items-start mt-5" style="gap: 40px; flex-wrap: wrap;">
+
+      <!-- Text Block -->
+      <div class="my-profile me-4">
+        <h2 class="subheading typewriter hello">
+          <span style="color: gray; font-weight: lighter;">----</span> About me <span style="color: gray; font-weight: lighter;">----</span>
+        </h2>
+
+        <br><br>
+        <p class="floating-text hello" style="max-width: 700px; text-align: justify; line-height: 1.9;">
+          I’m a B.Tech Computer Science Engineering student at  
+          <a class="link" href="https://lmcst.ac.in" target="_blank" style="color: #bf998f; text-decoration: none;">
+            Lourdes Matha College of Science and Technology
+          </a>, currently in my 7th semester. I enjoy combining my technical skills with creativity — whether it’s building responsive websites, designing user-friendly interfaces, or exploring new technologies.
+          <br>Here are some technologies I'm familiar with:
+        </p>
+
+        <div class="floating-text-group text-start">
+          <p class="floating-text hello">• Backend - Python, Basics of Java, C</p>
+          <p class="floating-text hello">• Design & Prototyping - Figma, UI/UX Basics</p>
+          <p class="floating-text hello">• Frontend - HTML5, CSS3, Bootstrap, JavaScript</p>
+          <p class="floating-text hello">• Database - Oracle SQL</p>
+        </div>
+      </div>
+
+      <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.floating-text').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+      <!-- Carousel -->
+      <div class="carousel-container" style="width: 350px; height: 400px;">
+        <div id="profileCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+          <div class="carousel-inner h-100 rounded">
+            <div class="carousel-item active h-100">
+              <img src="img1.jpg" class="d-block w-100 h-100" alt="Image 1">
+            </div>
+            <div class="carousel-item h-100">
+              <img src="img2.jpg" class="d-block w-100 h-100" alt="Image 2">
+            </div>
+            <div class="carousel-item h-100">
+              <img src="img3.jpg" class="d-block w-100 h-100" alt="Image 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#profileCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#profileCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+
+    </div> <!-- End of profile section -->
+</section>
+ 
+
+  
+     <div class="my-profile me-4 mt-5 mb-4" style="align-items: flex-start">
+        <h2 class="subheading typewriter hello">
+          <span style="color: gray; font-weight: lighter;">----</span> Pet Projects <span style="color: gray; font-weight: lighter;">----</span>
+        </h2>
+      </div>  
+
+
+      <!-- Carousel -->
+       <section id="projects">
+       <div id="carouselExampleCaptions" class="carousel slide mt-5 mb-5">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/shopweb.jpeg" class="d-block w-100" alt="shopping website">
+      <div class="carousel-caption d-none d-md-block">
+        <h4 style="color: #bf998f;">Shopping Website</h4>
+    <p style="color: #E5D0CF">An e-commerce front-end website designed to simulate a real-world online store — built to practice responsive layouts, cart functionality, and user interface design.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/liverror.jpg" class="d-block w-100" alt="Live Error detection">
+      <div class="carousel-caption d-none d-md-block">
+            <h4 style="color: #E5D0CF; ">Live Error detector using AI</h4>
+    <p style="color: #E5D0CF">A desktop-based tool  created to help developers detect and highlight live coding errors, including logical ones, as they type — enhancing productivity and debugging efficiency.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/portfolios.jpg" class="d-block w-100" alt="Portfolio">
+      <div class="carousel-caption d-none d-md-block">
+        <h4 style="color: #bf998f;">Personal Portfolio</h4>
+    <p style="color: #E5D0CF;">A responsive and interactive website built to showcase my skills, projects, and academic background — designed to reflect both my technical and creative strengths.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- Carousel ends-->
+</section>
+
+<!-- Cards -->
+<div class="card-container d-flex gap-2">
+  <div class="card mt-5 ms-5" style="width: 23rem; height: 30rem;">
+    <div class="card-body ">
+      <h4 class="card-title"> <span class="hello">Shopping</span>  website </h4>
+      <p class="card-text">A sleek, interactive front-end e-commerce site built to simulate a real-world shopping experience — with a focus on responsive design, product listings, and user-friendly navigation.</p>
+      <p class="card-text">	•	HTML5<br>
+	•	CSS3<br>
+	•	JavaScript<br>
+	•	Bootstrap <br> </p>
+      <a href="#" class="btn btn-shop">Github</a>
+    </div>
+  </div>
+    <div class="card mt-5 ms-5" style="width: 23rem; height: 30rem;">
+ 
+    <div class="card-body">
+      <h4 class="card-title"><span class="hello">AI</span> Live Error detection </h4>
+      <p class="card-text">A desktop-based tool that detects real-time coding errors — including logical and syntax errors — while developers write code, aiming to boost productivity and streamline debugging.</p>
+      <p class="card-text">		•	Electron.js<br>
+	•	Hugging Face API<br>
+	•	JavaScript<br>
+	•	Node.js </p>
+      <a href="https://github.com/ardrapadmakumar/AI-live-error-detector" class="btn btn-shop ">Github </a>
+    </div>
+  </div>
+     <div class="card mt-5 ms-5" style="width: 23rem; height: 30rem;">
+    
+    <div class="card-body">
+      <h4 class="card-title"> <span class="hello">Personal</span>  <br> portfolio </h4>
+      <p class="card-text">A fully responsive personal website crafted to showcase my skills, projects, and academic journey — designed to reflect both my technical expertise and creative flair.</p>
+      <p class="card-text">	•	HTML5<br>
+	•	CSS3<br>
+	•	JavaScript<br>
+	•	Bootstrap <br></p>
+      <a href="https://github.com/ardrapadmakumar/portfolio-website" class="btn btn-shop mt-3 ">Github</a>
+    </div>
+    </div>
+
+    </div>
+    <!-- Card ends -->
+   
+
+    <section id="connect">
+       <!-- Connect section -->
+        <div class="card connect-card mt-5 ms-5" >
+  <div class="row g-0 h-100">
+    
+    <!-- Left Side  -->
+      <div id="connect-animation" style="width: 300px; height: 300px; margin: auto;"></div>
+
+    <script>
+    lottie.loadAnimation({
+      container: document.getElementById('connect-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'handshakeReveal.json' 
+    });
+  </script>
+
+    <!-- Right Side (Buttons) -->
+    <div class="col-md-6 d-flex align-items-center justify-content-center mb-5">
+      <div class="d-flex flex-column gap-3">
+        <div class="card-body">
+        <h2 class="card-title"><span class="hello">Let's</span> Connect....</h2>
+        <p class="card-text">Feel free to reach out to me on any of these platforms!</p>
+      </div>
+        <a href="mailto:ardrapadmakumar@gmail.com" class="btn btn-shop"> Mail</a>
+        <a href="https://www.linkedin.com/in/ardrapadmakumar" target="_blank" class="btn btn-shop"> LinkedIn</a>
+        <a href="https://github.com/ardrapadmakumar" target="_blank" class="btn btn-shop"> GitHub</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<a href="#home" class="btn btn-shop mt-5">Back to top</a>
+
+   <div class="header-bar mt-5">
+  <p style="color: #E5D0CF; font-size: 12px;">
+  Built and designed by Ardra Padmakumar.
+</p>
+</div> 
+</section>
+    
+
+  </div> <!-- End of body -->
+
+  <!-- Scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+<!-- jQuery (required for Bootstrap 4) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Popper.js (for dropdowns and tooltips) -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
